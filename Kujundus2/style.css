@@ -1,0 +1,169 @@
+/* ==========================================
+   1. ÜLDISED STIILID JA PÄIS / JALUS
+   ========================================== */
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #2b0000;
+    font-family: fantasy, Georgia, serif;
+}
+
+h1 {
+    font-size: xxx-large;
+    color: antiquewhite;
+    text-align: center;
+    margin: 0;
+}
+
+header {
+    background-color: maroon;
+    background-image: url('Paike.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    min-height: 180px;
+}
+
+header h1 {
+    padding: 5%;
+    background-color: rgba(128, 0, 0, 0.65);
+    font-variant: small-caps;
+    border-bottom: 25px solid black;
+}
+
+footer {
+    padding: 3%;
+    background-color: maroon;
+    color: antiquewhite;
+    font-variant: small-caps;
+    text-align: center;
+    border-top: 25px solid black;
+
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* ==========================================
+   2. MAIN ALAHULK JA PAREMALE VIIDUD MENÜÜ
+   ========================================== */
+
+main {
+    background-color: #5c0000; /* Tume maroon taust */
+    padding: 30px;
+    padding-bottom: 120px;
+
+    /* Flexbox paigutus */
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+/* KASTIDE KONTEINER - Viidud vasakule/keskele */
+.content-container {
+    flex: 1; /* Võtab ülejäänud vaba ruumi */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Tsentreerib kastid keskele */
+    gap: 25px;
+    order: 1; /* Tagab, et sisu on EESPOOL (vasakul) */
+}
+
+/* MENÜÜ - Viidud kindlalt PAREMALE serva */
+nav {
+    width: 220px;
+    flex-shrink: 0;
+    order: 2; /* Tagab, et menüü on TAGAPOOL (paremal) */
+    position: sticky;
+    top: 20px; /* Menüü püsib kerides nähtaval */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: maroon; /* Bisque */
+    border: 5px solid black;
+    color: antiquewhite;
+    display: flex;
+    flex-direction: column; /* Lingid teine teise all */
+}
+
+nav ul li a {
+    display: block;
+    color: antiquewhite;
+    text-decoration: none;
+    padding: 14px 10px;
+    text-align: center;
+    border-bottom: 2px black solid;
+    font-variant: small-caps;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: all 0.2s ease-in-out;
+}
+
+nav ul li a:hover {
+    background-color: transparent;
+    color: antiquewhite;
+    padding-left: 15px; /* Väike liikumise efekt hiirega peale minnes */
+}
+
+/* ==========================================
+   3. UUE STIILIGA KASTID (SOBIVAD TAUSTAGA)
+   ========================================== */
+
+section {
+    width: 80%;
+    max-width: 650px;
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: center;
+    background-color:  darkred; /* Soe kreemjas/bisque taust nähtavuse tagamiseks */
+    color:antiquewhite;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4); /* Vari annab sügavuse */
+}
+
+/* Erinevad kontastsed äärised kastide kaupa */
+section#kast1 {
+    border: 5px solid black;
+}
+
+section#kast2 {
+    border: 8px dotted maroon;
+    border-radius: 20px 20px 80px 60px;
+}
+
+section#kast3 {
+    border: 15px double maroon;
+    border-radius: 20px 20px 80px 60px;
+}
+
+section#kast4 {
+    border: 4px dashed maroon;
+    border-radius: 20px 20px 80px 60px;
+}
+
+section#kast5,
+section#kast6,
+section#kast7,
+section#kast8 {
+    border: 5px solid maroon;
+    border-radius: 20px 20px 80px 60px;
+}
+
+/* Meedia sektsioonid */
+section#pildigalerii,
+section#kaart,
+section#muusika {
+    border: 8px solid maroon;
+    border-radius: 40px;
+}
+
+section#video {
+    border: 4px dashed maroon;
+    border-radius: 20px 20px 80px 60px;
+}
