@@ -1,0 +1,147 @@
+h1{
+    font-size: x-large;
+    font-family: Georgia, sans-serif;
+    color: sienna; /*teksti värv*/
+
+}
+header h1{
+    padding: 5%;
+    background-color: bisque;/*tausta värv*/
+    font-variant: small-caps;
+    border-bottom: 2px dashed chocolate;
+}
+header{
+    BACKGROUND-COLOR: bisque;
+    background-image:url('Paike.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+footer{
+    padding: 5%;
+    background-color: bisque;/*tausta värv*/
+    font-variant: small-caps;
+    border-top: 2px double chocolate;
+    position: fixed;
+    left:0;
+    bottom: 0;
+}
+section {
+    border: 1px solid maroon;/*solid,double,dashed,dotted*/
+    width : 25%;
+    margin: 2px;
+    padding: 1%;
+    border-radius: 30px 30px 120px 30px;
+    text-align: center;
+}
+section#kast1{
+    border: 1px solid maroon;/*solid,double,dashed,dotted*/
+    width : 25%;
+    margin: 5px;
+    padding: 1%;
+    border-radius: 30px 30px 120px 100px;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    top: 300px;
+}
+section#kast2 {
+    border: 10px dotted maroon;/*solid,double,dashed,dotted*/
+    width : 25%;
+    margin: 2px;
+    padding: 1%;
+    border-radius: 30px 30px 120px 100px;
+    text-align: center;
+    position: absolute;
+    left: 300px;
+    top: 300px;
+}
+section#kast3 {
+    border: 25px double maroon;/*solid,double,dashed,dotted*/
+    width : 25%;
+    margin: 2px;
+    padding: 1%;
+    border-radius: 30px 30px 120px 100px;
+    text-align: center;
+}
+section#kast4 {
+    border: 4px dashed maroon;/*solid,double,dashed,dotted*/
+    width : 25%;
+    margin: 2px;
+    padding: 1%;
+    border-radius: 30px 30px 120px 100px;
+    text-align: center;
+}
+section#kast5 {
+    border: 5px solid maroon;
+    width : 25%;
+    margin: 2px;
+    padding: 1%;
+    border-radius: 30px 30px 120px 100px;
+    text-align: center;
+}
+section#kast6 {
+    border: 5px solid maroon;
+    width : 25%;
+    margin: 2px;
+    padding: 1%;
+    border-radius: 30px 30px 120px 100px;
+    text-align: center;
+
+}
+section#kast7 {
+    border: 5px solid maroon;
+    width : 25%;
+    margin: 2px;
+    padding: 1%;
+    border-radius: 30px 30px 120px 100px;
+    text-align: center;
+
+}
+section#kast8 {
+    border: 5px solid maroon;
+    width : 25%;
+    margin: 2px;
+    padding: 1%;
+    border-radius: 30px 30px 120px 100px;
+    text-align: center;
+
+
+
+
+}
+/******************NAV*********************/
+nav ul{
+    list-style-type: none; /*täpp võtab ära'*/
+    margin: 0;
+    padding: 0;
+    background-color: bisque;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+nav ul li{
+    float: left;
+}
+nav ul li a{
+    display: block;
+    color: white;
+    text-decoration: none;/*alajoone on kustutatud*/
+    padding: 10px;
+    text-align: center;
+    border-left: 2px double chocolate;
+    border-right: 2px double chocolate;
+    border-bottom: 20px chocolate;%;
+    font-variant: small-caps;
+}
+nav ul li a:hover{ /*link fookuses - hiir on peal */
+    background-color: orange;
+}
+nav{
+    padding: 10px;
+    margin: 10px;
+}
+main{
+    margin-top: 20px;
+}
