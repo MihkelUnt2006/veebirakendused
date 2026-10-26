@@ -16,8 +16,9 @@ let raamat = {
 let raamatukogu = {
     raamatud: [
         { pealkiri: "Tõde ja õigus I", autor: "A. H. Tammsaare", aasta: 1926 },
-        { pealkiri: "Rehepapp", autor: "Andrus Kivirähk", aasta: 2000 },
-        { pealkiri: "Kevade", autor: "Oskar Luts", aasta: 1912 }
+        { pealkiri: "Apteeker Melchior ja Oleviste mõistatus", autor: "Indrek Hargla", aasta: 2010 },
+        { pealkiri: "Kevade", autor: "Oskar Luts", aasta: 1912 },
+        { pealkiri: "Abielu ookeanis",autor: "Maimu Berg", aasta: 1979 }
     ],
     // Kasutab forEach tsüklit (oli konspektis)
     kuvaKõikKonsoolis() {
@@ -62,9 +63,9 @@ function kuvaParast2000() {
 }
 
 function kuvaOtsing() {
-    let leitud = raamatukogu.otsiAastaJärgi(2000);
+    let leitud = raamatukogu.otsiAastaJärgi(2010);
     if (leitud) {
-        document.getElementById("vastus5").innerHTML = "Leitud aasta 2000 raamat: " + leitud.pealkiri + " (" + leitud.autor + ")";
+        document.getElementById("vastus5").innerHTML = "Leitud aasta 2010 raamat: " + leitud.pealkiri + " (" + leitud.autor + ")";
     } else {
         document.getElementById("vastus5").innerHTML = "Ei leitud";
     }
