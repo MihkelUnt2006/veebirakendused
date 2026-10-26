@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elektrikitara Anatoomia - Pealeht</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>Elektrikitara Anatoomia</h1>
+        <p>Klõpsake pildi erinevatel osadel, et avada detailne kirjeldus ja kontekst.</p>
+    </header>
+
+    <!-- Kasuta pilti suurusega vähemalt 600x400 px -->
+    <img src="guitar.jpg" alt="Elektrikitara anatoomia pildikaart" usemap="#guitarmap" width="650" height="450">
+
+    <map name="guitarmap">
+        <!-- 1. rect: Pealaba -->
+        <area shape="rect" coords="20,10,120,120" href="headstock.html" alt="Pealaba" title="Pealaba (Headstock)">
+
+        <!-- 2. circle: Häälestuspulgad / Pingutid -->
+        <area shape="circle" coords="70,60,25" href="tuners.html" alt="Pingutid" title="Pingutid (Tuning Pegs)">
+
+        <!-- 3. poly: Kael ja sõrmlaud -->
+        <area shape="poly" coords="125,90,140,90,320,160,305,190" href="neck.html" alt="Kael ja sõrmlaud" title="Kael ja sõrmlaud">
+
+        <!-- 4. rect: Helipead (Pickups) -->
+        <area shape="rect" coords="330,130,420,200" href="pickups.html" alt="Helipead" title="Helipead (Pickups)">
+
+        <!-- 5. poly: Sild ja tremolo -->
+        <area shape="poly" coords="430,145,520,140,530,210,430,210" href="bridge.html" alt="Sild ja tremolo" title="Sild ja tremolo (Bridge)">
+
+        <!-- 6. circle: Juhtnupud -->
+        <area shape="circle" coords="480,260,22" href="controls.html" alt="Juhtnupud" title="Juhtnupud (Volume/Tone)">
+    </map>
+
+    <div class="description-box">
+        <h3>Ülevaade projektist</h3>
+        <p>See interaktiivne pildikaart on loodud HTML-i <code>&lt;map&gt;</code> ja <code>&lt;area&gt;</code> elementide abil. Pilt on jagatud kuueks unikaalseks piirkonnaks, kasutades ristküliku (rect), ringi (circle) ja polügooni (poly) kujundeid. Igal alal klikkides suunatakse kasutaja spetsiaalsele alamlehele.</p>
+    </div>
+</div>
+</body>
+</html>
