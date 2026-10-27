@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elektrikitarr - Lüliti</title>
+    <link rel="stylesheet" href="mapareastyle.css">
+</head>
+<body>
+
+<header>
+    <h1>Elektrikitarr — Lüliti (Pickup Selector)</h1>
+</header>
+
+<main>
+    <div class="image-container">
+        <img src="Guitar.jpg" alt="Elektrikitarr" width="600" height="900" usemap="#guitar_map" class="map-image">
+        <map name="guitar_map">
+            <!-- Ristkülikud (rect): Kolkid (jäetud endiseks, kuna need olid õiged) ja sild -->
+            <area shape="rect" coords="270,35,315,165" alt="Kolkid" href="kolkid.html" title="Kolkid">
+            <area shape="rect" coords="272,729,331,767" alt="Sild" href="sild.html" title="Klõpsa: Sild">
+
+            <!-- Ringid (circle): Potekad ja lüliti -->
+            <area shape="circle" coords="358,730,13" alt="Potekad" href="potekad.html" title="Potekad">
+            <area shape="circle" coords="365,695,18" alt="Lüliti" href="luliti.html"  title="Luliti">
+
+            <!-- Polügoonid (poly): Helipead ja Kael -->
+            <area shape="poly" coords="265,590,335,590,335,735,265,735" alt="Helipead" href="helipead.html" title="Klõpsa: Helipead">
+            <area shape="poly" coords="280,215,315,215,315,560,280,560" alt="Kael" href="kael.html" title="Klõpsa: kael">
+        </map>
+    </div>
+
+    <div class="description-box">
+        <img src="luliti.jpg" alt="Elektrikitarr" width="363" height="400" class="map-image">
+        <h2>Esiletõstetud ala: Helipeade lüliti</h2>
+        <p>Lüliti abil saab valida, millist helipead või milliste helipeade kombinatsiooni kitarr kasutab. See mõjutab otseselt tooni, pakkudes kas teravamat või pehmemat kõlavärvi. See ala on kaardil defineeritud ringi (<code>circle</code>) kujundina.</p>
+    </div>
+
+    <p><a href="MapareaIndex.html" class="nav-back">← Tagasi pealehele</a></p>
+</main>
+
+<footer>
+</footer>
+
+</body>
+</html>
