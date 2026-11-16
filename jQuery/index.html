@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery kasutamine</title>
+    <link rel="stylesheet" href="queryStyle.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+            crossorigin="anonymous">
+
+    </script>
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.min.js"
+            integrity="sha256-AlTido85uXPlSyyaZNsjJXeCs07eSv3r43kyCVc8ChI="
+            crossorigin="anonymous">
+
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('#kuva').hide();
+            //nupu peida vajutamine
+            $('#peida').click(function () {
+                $('#sisu').hide(500);
+                $(this).hide();
+                $('#kuva').show();
+            });
+            $('#kuva').click(function () {
+                $('#sisu').show(500);
+                $(this).hide();
+                $('#peida').show();
+            });
+        });
+        function xyKoordinat(event,ui){
+            let koht=ui.offset;
+            $('#vastus').html('x: '+koht.left+ ';   y  '+koht.top);
+        }
+        function start(){
+           $('#sisu').draggable();
+           $('#pilt').draggable();
+           $('#pilt').bind("drag", xyKoordinat);
+           $('#sisu').bind("drag", xyKoordinat);
+           $('#pilt2').draggable();
+           $('#pilt2').bind("drag", xyKoordinat);
+        }
+
+    </script>
+</head>
+<body onload="start()">
+<header>
+    <h1>jQuery kasutamine</h1>
+    </header>
+<main>
+    <input type="button" value="---->" id="paremale"
+    onclick="$('#sisu, h2').animate({left: '500px'}, 1000)
+    $(this).hide();
+    $('#vasakule').show();">
+    <input type="button" value="<----" id="vasakule" style="display:none"
+           onclick="$('#sisu, h2').animate({left: '0px'}, 1000)
+    $(this).hide();
+    $('#paremale').show();">
+    <input type="button" value="Peida" id="peida">
+    <input type="button" value="Kuva" id="kuva">
+    <section>
+        <h2>JQuery file upload</h2>
+        <div id="sisu">
+            jQuery File Upload is a popular approach to sending files to a server asynchronously, most famously implemented via the blueimp jQuery-File-Upload widget. You can also upload files natively with jQuery using the standard $.ajax() method and the browser's FormData object without third-party plugins.
+        </div>
+    </section>
+    <section>
+        <img src="https://space-facts.com/wp-content/uploads/saturn-transparent-768x768.png" alt="" id="pilt">
+        <div id="vastus"></div>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJEHBHPwnrmseW8W4KX7nPQlv7pWvBTQy3gDOR6QIeVg&s" alt="" id="pilt2">
+    </section>
+
+</main>
+</body>
+</html>
