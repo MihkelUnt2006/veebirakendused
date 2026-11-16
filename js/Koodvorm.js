@@ -108,11 +108,45 @@ function puhasta(){
     document.getElementById("tooriistad").value="";
     document.getElementById("soov").selectedIndex=0;
 
-    vastus1.innerHTML="";
-    vastus2.innerHTML="";
-    vastus3.innerHTML="";
-    vastus4.innerHTML="";
-    vastus5.innerHTML="";
-    vastus6.innerHTML="";
-    vastusKoik.innerHTML="";
+    document.getElementById("vastus1").innerHTML="";
+    document.getElementById("vastus2").innerHTML="";
+    document.getElementById("vastus3").innerHTML="";
+    document.getElementById("vastus4").innerHTML="";
+    document.getElementById("vastus5").innerHTML="";
+    document.getElementById("vastus6").innerHTML="";
+    document.getElementById("vastusKoik").innerHTML="";
+    document.getElementById("smiley").src="";
+
+    $('.viga').hide();
 }
+
+$(function () {
+    $('.viga').hide();
+
+    $('#koodVorm').submit(function (event) {
+        event.preventDefault();
+        let valid = true;
+
+        // checkbox: vähemalt üks
+        if ($('input[name="keeled"]:checked').length === 0) { $('#viga1').show(); valid = false; }
+        else { $('#viga1').hide(); }
+
+        // textarea: mitte tühi
+        if ($('#arvamus').val().trim() === "") { $('#viga2').show(); valid = false; }
+        else { $('#viga2').hide(); }
+
+        // radio: vähemalt üks
+        if ($('input[name="meeldib"]:checked').length === 0) { $('#viga4').show(); valid = false; }
+        else { $('#viga4').hide(); }
+
+        // text: mitte tühi
+        if ($('#tooriistad').val().trim() === "") { $('#viga5').show(); valid = false; }
+        else { $('#viga5').hide(); }
+
+        // select: peab olema valitud
+        if ($('#soov').val() === "vali") { $('#viga6').show(); valid = false; }
+        else { $('#viga6').hide(); }
+
+        if (valid) { saada(); }
+    });
+});
