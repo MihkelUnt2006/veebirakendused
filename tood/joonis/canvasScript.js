@@ -84,21 +84,21 @@ function puhasta2() {
     }
 }
 
+// ratas - rattad
 function ratas() {
     const canvas = document.getElementById('canvas2');
     if(canvas.getContext) {
         let tx = canvas.getContext('2d');
         tx.beginPath();
         tx.fillStyle="darkred"; //fill vali varv raatas
-        tx.arc(250, 300, 20, 0, 2*Math.PI, true);
-        tx.arc(150, 300, 20, 0, 2*Math.PI, true);
+        tx.arc(250, 295, 20, 0, 2*Math.PI, true);
+        tx.arc(150, 295, 20, 0, 2*Math.PI, true);
         tx.fill();
         tx.beginPath();
         tx.fillStyle="silver";
-        tx.arc(250, 300, 10, 0, 2*Math.PI, true); //x,y -keskpunkt, R-raadius
-        tx.arc(150, 300, 10, 0, 2*Math.PI, true);
+        tx.arc(250, 295, 10, 0, 2*Math.PI, true); //x,y -keskpunkt, R-raadius
+        tx.arc(150, 295, 10, 0, 2*Math.PI, true);
         tx.fill();
-        //tx.stroke()
     }
 }
 // kere - alumine korpus
@@ -110,7 +110,7 @@ function kere() {
         tx.fillRect(100, 220, 200, 75);
     }
 }
-// katus - ülemine osa (kabiin)
+// katus - ülemine osa (kabiin kahe aknaga)
 function katus() {
     const canvas = document.getElementById('canvas2');
     if(canvas.getContext) {
@@ -120,44 +120,25 @@ function katus() {
         tx.fillStyle="lightyellow";
         tx.fillRect(150, 170, 100, 50);
         tx.strokeRect(150, 170, 100, 50);
+        // keskmine eraldusjoon
+        tx.beginPath();
+        tx.moveTo(200, 170);
+        tx.lineTo(200, 220);
+        tx.stroke();
     }
 }
+// tuled - esilaternate kiir (kolmnurk auto ees)
 function tuled() {
     const canvas = document.getElementById('canvas2');
     if(canvas.getContext) {
         let tx = canvas.getContext('2d');
         tx.beginPath();
-        tx.strokeStyle="orange";
-        tx.lineWidth = 3;
-        // teha 6 tuled joonidega
-        tx.moveTo(300, 235);
-        tx.lineTo(400, 200);
-        tx.moveTo(300, 245);
-        tx.lineTo(400, 220);
-        tx.moveTo(300, 265);
-        tx.lineTo(400, 265);
-        tx.moveTo(300, 255);
-        tx.lineTo(400, 255);
-        tx.moveTo(300, 275);
-        tx.lineTo(400, 290);
-        tx.moveTo(300, 285);
-        tx.lineTo(400, 310);
-        tx.stroke();
-    }
-}
-function aur() {
-    const canvas = document.getElementById('canvas2');
-    if(canvas.getContext) {
-        let tx = canvas.getContext('2d');
-        tx.beginPath();
-        tx.fillStyle="lightsteelblue";
-
-        //tx.arc(377, 275, 15, 0, 2*Math.PI, true); //x,y -keskpunkt, R-raadius
-        //tx.arc(355, 200, 10, 0, 2*Math.PI, true);
-        tx.arc(72, 250, 30, 0, 2*Math.PI, true); //x,y -keskpunkt, R-raadius
-        tx.arc(55, 200, 35, 0, 2*Math.PI, true);
+        tx.fillStyle="orange";
+        tx.moveTo(300, 233);  //auto esiosa
+        tx.lineTo(400, 180);
+        tx.lineTo(400, 260);
+        tx.closePath();
         tx.fill();
-        //tx.stroke()
     }
 }
 // kõik - joonistab kõik auto osad korraga
@@ -166,5 +147,4 @@ function koik() {
     katus();
     ratas();
     tuled();
-    aur();
 }
